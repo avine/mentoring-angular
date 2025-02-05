@@ -1,5 +1,9 @@
 <router-outlet />
 
-<app-counter [count]="appCount" (countChange)="appCount = $event" />
+<app-counter label="Counter" [count]="appCount" (countChange)="appCount = $event" />
 
-<app-counter [(count)]="appCount" />
+<app-counter label="Counter" [(count)]="appCount" />
+
+<app-counter label="Counter" [highlight]="true" />
+<app-counter label="Counter" highlight="true" />
+<app-counter label="Counter" highlight />

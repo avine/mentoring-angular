@@ -1,4 +1,4 @@
-import { Component, model } from '@angular/core';
+import { booleanAttribute, Component, input, model } from '@angular/core';
 
 @Component({
   selector: 'app-counter',
@@ -15,7 +15,11 @@ export class CounterComponent {
     this.countChange.emit(this.count() + 1);
   }*/
 
-  count = model(0);
+  label = input.required<string>();
+
+  count = model<number>(0);
+
+  highlight = input(false, { transform: booleanAttribute });
 
   protected increment() {
     this.count.update((count) => count + 1);

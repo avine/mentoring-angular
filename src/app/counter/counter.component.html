@@ -1,1 +1,7 @@
-<button (click)="increment()">counter works: {{ count() }}</button>
+<button (click)="increment()">
+  {{ label() }}
+
+  <span [style.color]="highlight() ? 'red' : null">
+    {{ count() }}
+  </span>
+</button>
