@@ -1,3 +1,19 @@
 <h1>Mentoring Angular</h1>
 
+<button (click)="addFruit()">Add fruit</button>
+
+<p>{{ fruits.join('; ') }}</p>
+
+<ul>
+  @for (fruit of fruits | sortList: '!'; track $index) {
+    <li>{{ fruit | uppercase }}</li>
+  } @empty {
+    <li>No fruits...</li>
+  }
+</ul>
+
+<p>Price: {{ 5.23 | currency }}</p>
+
+<p>Now: {{ now | date }}</p>
+
 <router-outlet />
