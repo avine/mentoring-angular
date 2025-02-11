@@ -1,3 +1,9 @@
 <h1>Mentoring Angular</h1>
 
+<app-font-size-selector />
+
+<p appHighlight="blue" (isHighlighted)="value = $event">Highlight 1 {{ value }}</p>
+
+<p appHighlight>Highlight 2</p>
+
 <router-outlet />
